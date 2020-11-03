@@ -152,7 +152,32 @@ string ParseCommandLine(int argc, const char *argv[], utils::Properties &props) 
       }
       input.close();
       argindex++;
-    } else {
+    } else if (strcmp(argv[argindex], "-path") == 0) {
+      argindex++;
+      if (argindex >= argc) {
+        UsageMessage(argv[0]);
+        exit(0);
+      }
+      props.SetProperty("path", argv[argindex]);
+      argindex++;
+    }else if (strcmp(argv[argindex], "-dbdisk") == 0) {
+      argindex++;
+      if (argindex >= argc) {
+        UsageMessage(argv[0]);
+        exit(0);
+      }
+      props.SetProperty("dbdisk", argv[argindex]);
+      argindex++;
+    } else if (strcmp(argv[argindex], "-dbmem") == 0) {
+      argindex++;
+      if (argindex >= argc) {
+        UsageMessage(argv[0]);
+        exit(0);
+      }
+      props.SetProperty("dbmem", argv[argindex]);
+      argindex++;
+    }
+	else {
       cout << "Unknown option '" << argv[argindex] << "'" << endl;
       exit(0);
     }

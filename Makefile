@@ -1,6 +1,6 @@
 CC=g++
-CFLAGS=-std=c++11 -g -Wall -pthread -I./
-LDFLAGS= -lpthread -ltbb -lhiredis
+CFLAGS=-std=c++11 -g -Wall -pthread -I./ -L/usr/local/lib 
+LDFLAGS= -lpthread -ltbb -lhiredis -lleveldb -lsnappy
 SUBDIRS=core db redis
 SUBSRCS=$(wildcard core/*.cc) $(wildcard db/*.cc)
 OBJECTS=$(SUBSRCS:.cc=.o)
