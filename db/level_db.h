@@ -4,7 +4,7 @@
 #include "core/db.h"
 
 #include <leveldb/db.h>
-#include <unordered_map>
+
 #include <vector>
 #include <string>
 using namespace std;
@@ -15,10 +15,7 @@ class Level : public DB
 {
     leveldb::DB *db;
     int serializator = 0;
-    std::unordered_map<std::string, unsigned int> prefixes_;
-    unsigned int maxPrefix_ = 0;
 
-    using FieldsMap = std::unordered_map<std::string, std::string>;
 
 public:
 	
