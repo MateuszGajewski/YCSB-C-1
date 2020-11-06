@@ -29,3 +29,10 @@ Note that we do not have load and run commands as the original YCSB. Specify
 how many records to load by the recordcount property. Reference properties
 files in the workloads dir.
 
+## To run level db
+Have to install leveldb as system library.
+To run benchmark:
+```
+./ycsbc -db leveldb -path ./db -threads 4 -P workloads/workloada.spec
+```
+where -path is a path to directory, where database is created.
