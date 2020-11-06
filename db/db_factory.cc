@@ -15,7 +15,6 @@
 #include "db/tbb_scan_db.h"
 #include "db/level_db.h"
 
-
 using namespace std;
 using ycsbc::DB;
 using ycsbc::DBFactory;

@@ -2,9 +2,7 @@
 #define YCSB_C_LEVELDB_H
 
 #include "core/db.h"
-
 #include <leveldb/db.h>
-
 #include <vector>
 #include <string>
 using namespace std;

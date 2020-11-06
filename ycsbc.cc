@@ -5,7 +5,6 @@
 //  Created by Jinglei Ren on 12/19/14.
 //  Copyright (c) 2014 Jinglei Ren <jinglei@ren.systems>.
 //
-
 #include <cstring>
 #include <string>
 #include <iostream>
