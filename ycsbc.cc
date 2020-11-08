@@ -175,6 +175,14 @@ string ParseCommandLine(int argc, const char *argv[], utils::Properties &props) 
       }
       props.SetProperty("dbmem", argv[argindex]);
       argindex++;
+    } else if (strcmp(argv[argindex], "-key") == 0) {
+      argindex++;
+      if (argindex >= argc) {
+        UsageMessage(argv[0]);
+        exit(0);
+      }
+      props.SetProperty("key", argv[argindex]);
+      argindex++;
     }
 	else {
       cout << "Unknown option '" << argv[argindex] << "'" << endl;
